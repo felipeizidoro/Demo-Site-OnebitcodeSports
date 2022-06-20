@@ -2,27 +2,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 20px;
 }
-header{
-    background-color: rgb(43, 42, 42);
-    height: 80px;
+.container{
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
+ }
+ .logoHeader{
+    width: 180px;  
+}
+.header{
+    background-color: #292929;
+    width: 100%;
+    min-height: 40px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 10px 25px;
+    padding: 30px;
     align-items: center;
+    gap: 8px 15px;
 }
-.logo{
-    width: 200px;  
-}
-.buttons{
-    display: flex;
-    gap: 10px;
-}
-.buttonHeader{
-    font-size:15px ;
-    background-color: transparent;
-    color: white;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: 0.4s;
-}
+
+
