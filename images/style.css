@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
  }
- .logoHeader{
+.logoHeader{
     width: 180px;  
 }
 .header{
@@ -56,6 +56,13 @@
     padding: 20px;
     flex: 1 0 auto;
 }
+.mainContent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    grid-area: mainContent;
+}
 .mainCardImg{
     width: 100%; height: 180px;
     border-radius: 10px;
@@ -70,32 +77,88 @@
 .categoryCard:hover{
     border: 1px solid black;
 }
+.mainCardTitle{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
 .mainCardDescription{
     text-align: center;
 }
-.mainCardTitle{
-    text-align: center;
-}
-.mainContent{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
 .sideContent{
-    background-color: gray;
+    background-color:#383838;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: sideContent;
+    min-width: 300px;
     border-radius:10px;
     text-align: center;
     color:white;
-    padding:20px;
+    gap:20px;
+}
+.sideCard{
+    width: 75%;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor:pointer;
+}
+.sideCard:hover{
+    border: 1px solid gainsboro;
 }
 .sideMainTitle{
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 22px;
     padding:10px;
+    padding-top: 20px;
 }
 .sideCardTitle{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
     padding:10px;
 }
 .sideCardImg{
-    width: 100%; height: 100%;
+    width: 100%; 
     border-radius: 10px;
+}
+.footer{
+    width: 100%;
+    min-width: 40px;
+    background-color: #292929;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px;
+    align-items: center;
+    gap: 15px;
+}
+.logoFooter{
+    width:180px;
+}
+.buttonBackToTop{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+}
+@media(max-width: 630px){
+    .contentSection{
+        grid-template-areas: 
+        "mainContent"
+        "sideContent";
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .sideContent{
+        min-width: auto;
+    }
+}
+@media(max-width:490px){
+    .header{
+        justify-content: center;
+    }
+    .footer{
+        justify-content: center;
+    }
 }
